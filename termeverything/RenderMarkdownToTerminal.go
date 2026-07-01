@@ -3,7 +3,7 @@ package termeverything
 import (
 	"strings"
 
-	"github.com/mmulet/term.everything/escapecodes"
+	"github.com/furrysalamander/term.everything/escapecodes"
 )
 
 func RenderMarkdownToTerminal(markdown string) string {

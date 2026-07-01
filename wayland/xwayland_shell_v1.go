@@ -4,7 +4,7 @@ package wayland
 import (
 	"fmt"
 
-	"github.com/mmulet/term.everything/wayland/protocols"
+	"github.com/furrysalamander/term.everything/wayland/protocols"
 )
 
 type XwaylandShellV1 struct {

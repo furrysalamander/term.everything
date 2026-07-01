@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mmulet/term.everything/wayland/protocols"
+	"github.com/furrysalamander/term.everything/wayland/protocols"
 )
 
 var (

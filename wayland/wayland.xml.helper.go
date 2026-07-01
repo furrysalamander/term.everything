@@ -2,7 +2,7 @@
 
 package wayland
 
-import "github.com/mmulet/term.everything/wayland/protocols"
+import "github.com/furrysalamander/term.everything/wayland/protocols"
 
 func GetWlSurfaceObject(cs protocols.ClientState, id protocols.ObjectID[protocols.WlSurface]) *WlSurface {
 	v := cs.GetObject(protocols.AnyObjectID(id))

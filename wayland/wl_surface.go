@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"image"
 
-	"github.com/mmulet/term.everything/wayland/protocols"
+	"github.com/furrysalamander/term.everything/wayland/protocols"
 )
 
 type Texture struct {

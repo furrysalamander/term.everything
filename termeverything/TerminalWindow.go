@@ -7,10 +7,10 @@ import (
 	"slices"
 	"syscall"
 
-	"github.com/mmulet/term.everything/escapecodes"
-	"github.com/mmulet/term.everything/framebuffertoansi"
-	"github.com/mmulet/term.everything/wayland"
-	"github.com/mmulet/term.everything/wayland/protocols"
+	"github.com/furrysalamander/term.everything/escapecodes"
+	"github.com/furrysalamander/term.everything/framebuffertoansi"
+	"github.com/furrysalamander/term.everything/wayland"
+	"github.com/furrysalamander/term.everything/wayland/protocols"
 )
 
 type RenderedScreenSize struct {

@@ -7,8 +7,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/mmulet/term.everything/escapecodes"
-	"github.com/mmulet/term.everything/framebuffertoansi"
+	"github.com/furrysalamander/term.everything/escapecodes"
+	"github.com/furrysalamander/term.everything/framebuffertoansi"
 )
 
 type LineButton struct {
@@ -128,7 +128,7 @@ func MakeStatusLine() *Status_Line {
 				title := url.QueryEscape("Bug Report")
 				body := url.QueryEscape(sl.buildBugBody())
 				_ = exec.Command("xdg-open",
-					"https://github.com/mmulet/term.everything/issues/new?title="+title+"&body="+body).Start()
+					"https://github.com/furrysalamander/term.everything/issues/new?title="+title+"&body="+body).Start()
 			},
 		},
 	}

@@ -1,6 +1,6 @@
 package wayland
 
-import "github.com/mmulet/term.everything/wayland/protocols"
+import "github.com/furrysalamander/term.everything/wayland/protocols"
 
 func (c *Client) AddGlobalWlShmBind(objectID protocols.ObjectID[protocols.WlShm], version protocols.Version) {
 	binds, ok := c.GlobalBinds[protocols.GlobalID_WlShm]

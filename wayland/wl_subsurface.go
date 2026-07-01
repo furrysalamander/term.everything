@@ -1,8 +1,8 @@
 package wayland
 
 import (
-	"github.com/mmulet/term.everything/wayland/pointerslices"
-	"github.com/mmulet/term.everything/wayland/protocols"
+	"github.com/furrysalamander/term.everything/wayland/pointerslices"
+	"github.com/furrysalamander/term.everything/wayland/protocols"
 )
 
 type WlSubsurface struct {

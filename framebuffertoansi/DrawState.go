@@ -10,7 +10,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/mmulet/term.everything/escapecodes"
+	"github.com/furrysalamander/term.everything/escapecodes"
 )
 
 type DrawState struct {

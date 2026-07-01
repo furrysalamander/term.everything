@@ -1,7 +1,7 @@
 package wayland
 
 import (
-	"github.com/mmulet/term.everything/wayland/protocols"
+	"github.com/furrysalamander/term.everything/wayland/protocols"
 )
 
 type PendingToplevelState struct {

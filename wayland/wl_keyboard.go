@@ -4,7 +4,7 @@ import (
 	_ "embed"
 	"os"
 
-	"github.com/mmulet/term.everything/wayland/protocols"
+	"github.com/furrysalamander/term.everything/wayland/protocols"
 )
 
 //go:embed resources/server-1.xkb

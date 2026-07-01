@@ -25,7 +25,7 @@ func main() {
 Generates protocol bindings into protocol_out_dir
 Optionally, generate helper functions into helpers_out_dir
 Output helper function into helpers_out_dir (usually want this be a different package than protocols)
-So if so, also provide protocols_package as the package name for protocols package like github.com/mmulet/term.everything/wayland/protocols
+So if so, also provide protocols_package as the package name for protocols package like github.com/furrysalamander/term.everything/wayland/protocols
 If you omit this we'll assume the helpers are in the same package as protocols
 
 If you provide interfaces, we'll only generate those those helpers. separated by space.

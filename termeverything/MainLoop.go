@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/mmulet/term.everything/wayland"
+	"github.com/furrysalamander/term.everything/wayland"
 )
 
 func MainLoop() {

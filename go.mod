@@ -1,4 +1,4 @@
-module github.com/mmulet/term.everything
+module github.com/furrysalamander/term.everything
 
 go 1.25.2
 

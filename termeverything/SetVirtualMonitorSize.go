@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mmulet/term.everything/wayland"
+	"github.com/furrysalamander/term.everything/wayland"
 )
 
 func SetVirtualMonitorSize(newVirtualMonitorSize string) {

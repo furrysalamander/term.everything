@@ -1,6 +1,6 @@
 package wayland
 
-import "github.com/mmulet/term.everything/wayland/protocols"
+import "github.com/furrysalamander/term.everything/wayland/protocols"
 
 var Global_WlDisplay = MakeWLDisplay()
 var Global_WlOutput = MakeWlOutput()

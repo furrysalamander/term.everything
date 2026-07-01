@@ -1,6 +1,6 @@
 package wayland
 
-import "github.com/mmulet/term.everything/wayland/protocols"
+import "github.com/furrysalamander/term.everything/wayland/protocols"
 
 const (
 	stateObjectID protocols.DecodeStateType = iota

@@ -2,7 +2,7 @@
 
 package wayland
 
-import "github.com/mmulet/term.everything/wayland/protocols"
+import "github.com/furrysalamander/term.everything/wayland/protocols"
 
 func GetXdgPositionerObject(cs protocols.ClientState, id protocols.ObjectID[protocols.XdgPositioner]) *XdgPositioner {
 	v := cs.GetObject(protocols.AnyObjectID(id))
