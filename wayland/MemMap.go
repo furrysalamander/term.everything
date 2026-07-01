@@ -1,43 +1,37 @@
 package wayland
 
-/*
-#include "mmap.h"
-*/
-import "C"
-
 import (
 	"fmt"
 	"unsafe"
+
+	"golang.org/x/sys/unix"
 )
 
 type MemMapInfo struct {
 	Bytes          []byte
 	Addr           unsafe.Pointer
-	Size           C.size_t
-	FileDescriptor C.int
+	Size           uint64
+	FileDescriptor int
 	UnMapped       bool
 }
 
 func NewMemMapInfo(fd int, size uint64) (MemMapInfo, error) {
-	fdNum := C.int(fd)
-	c_size := C.size_t(size)
-	addr := C.mmap_fd(fdNum, c_size)
-	if addr == C.map_failed() {
+	data, err := unix.Mmap(fd, 0, int(size), unix.PROT_READ|unix.PROT_WRITE, unix.MAP_SHARED)
+	if err != nil {
 		return MemMapInfo{
-			Addr:           addr,
-			Size:           c_size,
-			FileDescriptor: fdNum,
+			FileDescriptor: fd,
+			Size:           size,
 			UnMapped:       true,
-		}, fmt.Errorf("failed to mmap fd %d", fdNum)
+		}, fmt.Errorf("failed to mmap fd %d: %w", fd, err)
 	}
 
 	info := MemMapInfo{
-		Addr:           addr,
-		Size:           c_size,
-		FileDescriptor: fdNum,
+		Addr:           unsafe.Pointer(unsafe.SliceData(data)),
+		Size:           uint64(len(data)),
+		FileDescriptor: fd,
 		UnMapped:       false,
+		Bytes:          data,
 	}
-	info.Bytes = unsafe.Slice((*byte)(info.Addr), info.Size)
 	return info, nil
 }
 
@@ -45,8 +39,9 @@ func (m *MemMapInfo) Unmap() {
 	if m.UnMapped {
 		return
 	}
-
-	C.unmap(m.Addr, m.Size)
+	if m.Bytes != nil {
+		unix.Munmap(m.Bytes)
+	}
 	m.UnMapped = true
 	m.Bytes = nil
 }
